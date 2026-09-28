@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Temple Color Palette */
+  --gold-50: #FCF9EE;
+  --gold-100: #F7F0D3;
+  --gold-200: #EFE0A7;
+  --gold-300: #E4CC74;
+  --gold-400: #D8B744;
+  --gold-500: #D4AF37; /* Authentic Sacred Gold */
+  --gold-600: #B8860B;
+  --gold-700: #8C6507;
+  --gold-800: #5C4204;
+  
+  --maroon-900: #26070B;
+  --maroon-800: #3E0C13;
+  --maroon-700: #57111B;
+  --maroon-600: #781825;
+  --maroon-500: #9A2030;
+
+  --green-900: #052410;
+  --green-800: #0B4420;
+  --green-700: #0F6330;
+  --green-600: #168843;
+
+  --ivory-50: #FFFDF9;
+  --ivory-100: #FBF8F0;
+  --ivory-200: #F4EFE2;
+  --ivory-300: #EAE1CF;
+  
+  --dark-base: #140A0C;
+  --text-primary: #21191B;
+  --text-secondary: #574D50;
+  --text-muted: #83787B;
+  --text-light: #F7F3EE;
+
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-subheading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 2px 8px rgba(38, 7, 11, 0.06);
+  --shadow-md: 0 6px 20px rgba(38, 7, 11, 0.09);
+  --shadow-lg: 0 12px 35px rgba(38, 7, 11, 0.14);
+  --shadow-xl: 0 20px 50px rgba(38, 7, 11, 0.22);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.35);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --transition-normal: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--ivory-50);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+  color: var(--maroon-900);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  position: relative;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px auto;
+}
+
+.section-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-600);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.35rem;
+  color: var(--maroon-900);
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.85rem;
+  }
+}
+
+.section-desc {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Badges */
+.badge-gold {
+  background: linear-gradient(135deg, var(--gold-100), var(--gold-200));
+  color: var(--gold-800);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gold-300);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-green {
+  background: #E8F5E9;
+  color: var(--green-800);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid #A5D6A7;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-maroon {
+  background: #FCE8EA;
+  color: var(--maroon-700);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  text-decoration: none;
+  border: none;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(184, 134, 11, 0.35);
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(184, 134, 11, 0.45);
+}
+
+.btn-maroon {
+  background: var(--maroon-800);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(62, 12, 19, 0.3);
+}
+
+.btn-maroon:hover {
+  background: var(--maroon-700);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(62, 12, 19, 0.45);
+}
+
+.btn-outline-white {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-700);
+  border: 1.5px solid var(--gold-500);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-50);
+  border-color: var(--gold-600);
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  background: #00B020;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 176, 32, 0.3);
+  font-weight: 700;
+}
+
+.btn-green:hover {
+  background: #00991C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 176, 32, 0.45);
+}
+
+/* Temple Card Styling */
+.temple-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--gold-400);
+}
+
+/* Traditional Gold Border Corner Accent */
+.temple-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-600), var(--gold-400), var(--gold-600));
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px rgba(253, 224, 71, 0.5));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(253, 224, 71, 0.9));
+  }
+}
+
+.animate-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 10, 12, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  max-width: 650px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--gold-300);
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Form inputs */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--maroon-900);
+  margin-bottom: 6px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid #D6D0C8;
+  background: var(--ivory-50);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: var(--transition-normal);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--gold-500);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ivory-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-400);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-600);
+}

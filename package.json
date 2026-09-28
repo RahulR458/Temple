@@ -1,0 +1,14 @@
+{
+  "name": "varkala-temple-website",
+  "version": "1.0.0",
+  "description": "Modern Static Temple Website for Varkala (No Database Required)",
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview"
+  },
+  "keywords": ["temple", "varkala", "static-website", "react", "kerala-temple"],
+  "author": "",
+  "license": "ISC"
+}
+

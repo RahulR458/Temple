@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#2A0B0E" stroke="#D4AF37" stroke-width="2"/>
+  <!-- Nilavilakku / Brass Lamp -->
+  <path d="M32 10 C30 15, 27 20, 32 25 C37 20, 34 15, 32 10 Z" fill="#FDE047"/>
+  <circle cx="32" cy="18" r="2.5" fill="#DC2626"/>
+  <ellipse cx="32" cy="27" rx="14" ry="4" fill="#D4AF37"/>
+  <path d="M26 27 L28 46 L36 46 L38 27 Z" fill="#B8860B"/>
+  <ellipse cx="32" cy="46" rx="12" ry="3.5" fill="#D4AF37"/>
+  <path d="M22 47 L20 54 L44 54 L42 47 Z" fill="#996515"/>
+  <ellipse cx="32" cy="54" rx="16" ry="4" fill="#D4AF37" stroke="#FDE047" stroke-width="1"/>
+</svg>
